@@ -1,0 +1,73 @@
+body {
+    padding-top: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin-top: 5px;
+}
+
+/* StatusMessage */
+#statusMessage{
+    text-align: center;
+}
+
+#animate{
+    background-color:red;
+    height: 100%;
+}
+
+#rotatingTimer {
+    position :relative;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    75%  {top: 50px}
+    100% {top: 100px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    75%  {top: 50px}
+    100% {top: 100px;}
+}
+
+#rotating { height: 100%; margin-top: 50px; 
+-webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.rotated { transform:rotate(25deg); -webkit-transform:rotate(25deg); -moz-transform:rotate(25deg); -o-transform:rotate(25deg); }
+.rotatedInverse { transform:rotate(-35deg); -webkit-transform:rotate(-35deg); -moz-transform:rotate(-35deg); -o-transform:rotate(-35deg); }
+
+canvas .default {
+    border: 1px solid black;
+}
+
+canvas .active {
+    border: 1px solid red;
+}
+
+div .feedback {
+    color: red;
+    font-size: 1.0em;
+}
+
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    background: #fff;
+}
